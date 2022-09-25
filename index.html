@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program DAA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <div class="logo1">
+                <h1>Kelompok 2</h1>
+            </div>
+            <div class="menu">
+                <ul class="nav" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="greedy-tab" data-toggle="tab" href="#greedy" role="tab" aria-controls="greedy" aria-selected="true">Greedy</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="anggota-tab" data-toggle="tab" href="#anggota" role="tab" aria-controls="anggota" aria-selected="true">Members</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="prosolv-tab" data-toggle="tab" href="#prosolv" role="tab" aria-controls="prosolv" aria-selected="true">Problem Solving</a>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="card-body mx-5 my-3 tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="greedy" role="tabpanel" aria-labelledby="greedy-tab">
+          <h3 class="text-center">Program Greedy Peti Kemas Kapal</h3>
+          <ul>
+            <li>Sebuah kapal angkutan barang akan diisi muatan untuk dibawa ke luar negeri. Setiap muatan disimpan kedalam suatu peti kemas dengan ukuran yang sama, namun karena isi dari peti kemas tersebut bisa berbeda, maka masing – masing peti kemas tersebut memiliki berat yang berbeda. Diberikan W[i] adalah peti kemas ke i dengan berat tertentu, 1 ≤ i ≤ n.</li>
+            <li>Kapasitas muatan yang dapat dibawa oleh kapal tersebut adalah C. Kapal harus memuat sebanyak mungkin peti kemas dimana peti kemas yang dibawa tidak melebihi kapasitas muatan kapal tersebut.</li>
+          </ul>
+          <div class="row justify-content-center text-center">
+            <div class="col-md-8">
+              <div class="input-group mx-auto">
+                <input type="number" class="form-control" placeholder="Masukan Nilai W" min="1" max="9999" id="wval" />
+                <button type="button" class="btn-sm btn-primary" id="addArr">Add</button>
+              </div>
+              <div id="arr" class="my-2"></div>
+              <div id="btn-1" class="my-2"></div>
+              <div id="btn-2" class="my-2"></div>
+              <div id="valc" class="my-2"></div>
+              <div id="btn-3" class="my-2"></div>
+              <div id="elemen-greedy" class="my-4 text-start"></div>
+              <div id="greedy-value" class="my-4"></div>
+              <div id="greedy-result" class="my-2"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade text-center" id="anggota" role="tabpanel" aria-labelledby="anggota-tab">
+           <div class="row justify-content-center">
+            <div class="col-md-12">
+              <h5>--- Members of The Group ---</h5>
+              <div class="list-group mx-auto">
+                <h5 target="_blank" class="list-group-item">Muhamad Yandi - 0619101034</h5>
+                <h5 target="_blank" class="list-group-item">Zalfa Hilmi Abdilah - 0619101059</h5>
+                <h5 target="_blank" class="list-group-item">Yusran Septyana - 0619101060</h5>
+                <h5 target="_blank" class="list-group-item">Rifky Fitra Nugraha - 0619101063</h5>
+                <h5 target="_blank" class="list-group-item">Malik Rosydin - 0619101078</h5>
+                <h5 target="_blank" class="list-group-item">Alam Maulana Rachmat - 0619101104</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade text-start" id="prosolv" role="tabpanel" aria-labelledby="prosolv-tab">
+            <h4>Problem</h4>
+            <ul>
+              <li>Sebuah kapal angkutan barang akan diisi muatan untuk dibawa ke luar negeri. Setiap muatan disimpan kedalam suatu peti kemas dengan ukuran yang sama, namun karena isi dari peti kemas tersebut bisa berbeda, maka masing – masing peti kemas tersebut memiliki berat yang berbeda. Diberikan wi adalah peti kemas ke i dengan berat tertentu, 1 ≤ i ≤ n.</li>
+              <li>Kapasitas muatan yang dapat dibawa oleh kapal tersebut adalah C. Kapal harus memuat sebanyak mungkin peti kemas dimana peti kemas yang dibawa tidak melebihi kapasitas muatan kapal tersebut.</li>
+            </ul>
+            <br>
+            <h4>Elemen Greedy</h4>
+            <ul>
+                <li>Himpunan kandidat : Memiliki sejumlah peti kemas dengan ukuran sama namun memiliki berat yang berbeda.</li>
+                <li>Himpunan Solusi : Memilih Peti kemas dengan berat muatan maksimal adalah C.</li>
+                <li>Fungsi Seleksi : Memilih peti kemas yang bermuatan kecil.</li>
+                <li>Fungsi Kelayakan : Memeriksa apakah peti kemas yang dipilih apabila muatannya ditambah dengan muatan peti sebelumnya tidak melebihi kapasitas muatan kapal.</li>
+                <li>Fungsi Obyektif : Kapal harus memuat peti kemas sebanyak mungkin.</li>
+            </ul>
+            <br>
+            <h4>Problem Solving</h4>
+            <h6>Simulasi pemecahan masalah dengan n = 8, w = {100, 200, 50, 90, 150, 50, 20, 80}, dan C = 400</h6>
+            <br>
+            <p>Batas muatan kapal C = 400, dengan peti kemas yang tersedia n = 8, dengan masing-masing memiliki muatan w = {100, 200, 50, 90, 150, 50, 20, 80}. <br> Misal : S adalah jumlah himpunan.</p>
+            <ul>
+                <li>Langkah 1 : Pilih peti dengan muatan terkec w = {20, 50, 50, 80, 90, 100, 150, 200}</li>
+                <li>Langkah 2 : jumlahkan peti yang terpilih ke dalam S</li>
+                <li>Langkah 3 : hentikan dan batalkan penjumlahan ketika S melebihi C (Contoh : S = 20 + 50 + 50 + 80 + 90 + 100 = <span class='fw-bold'>390 ≤ 400</span> )</li>
+            </ul>
+            <br>
+            <h6>Solusi : jumlah peti kemas maksimun = 6 (solusi optimal)</h6>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
